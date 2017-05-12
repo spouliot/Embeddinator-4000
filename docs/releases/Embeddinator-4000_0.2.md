@@ -14,14 +14,16 @@ Optional
 --------
 
 * [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/);
-* [Xamarin.iOS 10.11.0.136 or later](https://jenkins.mono-project.com/view/Xamarin.MaciOS/job/xamarin-macios-builds-master/) **Links to preview builds**. Required for iOS, tvOS and watchOS support;
-* [Xamarin.iOS 3.5.0.144 or later](https://jenkins.mono-project.com/view/Xamarin.MaciOS/job/xamarin-macios-builds-master/) **Links to preview builds**. Required for standalone macOS support;
+* [Xamarin.iOS 10.11.x](https://jenkins.mono-project.com/view/Xamarin.MaciOS/job/xamarin-macios-builds-master/) **Links to preview builds**. Required for iOS, tvOS and watchOS support;
+* [Xamarin.iOS 3.5.x](https://jenkins.mono-project.com/view/Xamarin.MaciOS/job/xamarin-macios-builds-master/) **Links to preview builds**. Required for standalone macOS support;
+
+_The required minimum versions are evolving as the tool progress. The current ones are listed [in the repository](https://github.com/mono/Embeddinator-4000/blob/objc/objcgen/Make.config) itself_
 
 
 What's New
 ==========
 
-This second release builds upon our initial version previewed at //build 2017.
+This second release builds upon our initial version previewed during //build 2017.
 _to be completed_
 
 Objective-C Support
@@ -31,6 +33,7 @@ Objective-C Support
 * [pr299](https://github.com/mono/Embeddinator-4000/pull/299) - [interop] Added support for managed types implementing `IEquatable<T>`;
 * [pr292](https://github.com/mono/Embeddinator-4000/pull/292) - [interop] `System.Decimal` is now mapped with Foundation's `NSDecimalNumber`
 * [pr315](https://github.com/mono/Embeddinator-4000/pull/315) - [generator] Better names are generated when types are used
+* [pr327](https://github.com/mono/Embeddinator-4000/pull/327) - [interop] Added support for `System.TimeSpan`
 
 iOS Support
 -----------
@@ -44,7 +47,7 @@ macOS Support
 * [pr324](https://github.com/mono/Embeddinator-4000/pull/324) - [mmp] Support for native frameworks generated with Xamarin.Mac;
 * [pr324](https://github.com/mono/Embeddinator-4000/pull/324) - [registrar] Support for subclassing managed subclasses of `NSObject` from Xamarin.Mac based assemblies;
 
-note: macOS support _without Xamarin.Mac_ remains supported but requires a compatible version of Mono to be installed on the computer;
+note: macOS support _without Xamarin.Mac_ remains possible but requires a compatible version of Mono to be installed on the target computer - i.e. it does **not** create standalone applications.
 
 tvOS Support
 ------------
